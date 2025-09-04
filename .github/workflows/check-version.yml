@@ -53,7 +53,6 @@ jobs:
           sed -i '5d' README.md
           sed -i "5i$NEW_LINE" README.md
 
-
       - name: Commit changes
         if: ${{ steps.version-extract.outputs.version != steps.get-release.outputs.latest_tag }}
         run: |
@@ -92,16 +91,16 @@ jobs:
         include:
           - registry: ghcr
             component: backend
-            image_name: hydro-docker-backend-alpine
+            image_name: docker-hoj-backend-alpine
           - registry: ghcr
             component: judge
-            image_name: hydro-docker-judge-alpine
+            image_name:docker-oj-judge-alpine
           - registry: dockerhub
             component: backend
-            image_name: hydro-docker-backend-alpine
+            image_name: docker-hoj-backend-alpine
           - registry: dockerhub
             component: judge
-            image_name: hydro-docker-judge-alpine
+            image_name: docker-oj-judge-alpine
     permissions:
       contents: read
       packages: write

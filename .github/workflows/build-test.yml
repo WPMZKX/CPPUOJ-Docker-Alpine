@@ -17,16 +17,16 @@ jobs:
         include:
           - arch: linux/amd64
             component: backend
-            image_name: hydro-docker-backend-alpine-test
+            image_name: docker-hoj-backend-alpine-test
           - arch: linux/amd64
             component: judge
-            image_name: hydro-docker-judge-alpine-test
+            image_name: docker-oj-judge-alpine-test
           - arch: linux/arm64/v8
             component: backend
-            image_name: hydro-docker-backend-alpine-test
+            image_name: docker-hoj-backend-alpine-test
           - arch: linux/arm64/v8
             component: judge
-            image_name: hydro-docker-judge-alpine-test
+            image_name: docker-oj-judge-alpine-test
     permissions:
       contents: read
       packages: write
