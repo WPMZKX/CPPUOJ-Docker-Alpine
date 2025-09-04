@@ -1,6 +1,17 @@
 version: '3.7'
 
 services:
+  oj-minio:
+    image: minio/minio
+    container_name: oj-minio
+    command: server /data
+    restart: always
+    volumes:
+      - ./data/minio:/data
+    environment:
+      - MINIO_ACCESS_KEY=CHANGE_THIS
+      - MINIO_SECRET_KEY=CHANGE_THIS
+    
   # Warning: mongodb here is not password-protected.
   # DO NOT EXPOSE THIS SERVICE TO THE PUBLIC.
   oj-mongo:
@@ -10,9 +21,9 @@ services:
     volumes:
       - ./data/mongo:/data/db
 
-  oj-backend:
-    image: petermatthew/hydro-docker-backend
-    container_name: oj-backend
+  hoj-backend:
+    image: wpmzkx/docker-hoj-backend-alpine
+    container_name: hoj-backend
     restart: always
     depends_on:
       - oj-mongo
@@ -25,12 +36,18 @@ services:
       - "0.0.0.0:8888:8888" # In docker mode, change THIS port instead of port in system settings!
 
   oj-judge:
-    image: petermatthew/hydro-docker-judge
+    image: wpmzkx/docker-oj-judge-alpine
     container_name: oj-judge
     restart: always
     privileged: true
     depends_on:
-      - oj-backend
+      - hoj-backend
     volumes:
       - ./data/judge:/root/.config/hydro
     shm_size: '2gb'
+
+networks:
+  default:
+    ipam:
+      config:
+      - subnet: "192.168.133.0/24"
