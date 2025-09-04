@@ -1,16 +1,26 @@
-## Hydro-Docker (Ver. Alpine Dev)
+## CPPUOJ-Docker (Ver. Alpine Dev)
 
 > 以下内容魔改自 [源仓库](https://github.com/hydro-dev/Hydro) 的 `Hydro/install/docker` 文件夹，脚本内容不一定为最新版，请核对后使用
 > 
 > 构建日期: 2025-09-04，版本: v5.0.0-beta.8
 
-![backend Pulls](https://img.shields.io/docker/pulls/petermatthew/hydro-docker-backend?label=backend%20pulls)
-![backend Image Size](https://img.shields.io/docker/image-size/petermatthew/hydro-docker-backend?sort=date&label=backend%20size)
-![hydro-docker-backend Image Version](https://img.shields.io/docker/v/petermatthew/hydro-docker-backend?sort=date&label=hydro-docker-backend)
+![backend Pulls](https://img.shields.io/docker/pulls/wpmzkx/docker-hoj-backend-alpine?label=backend-alpine%20pulls)
+![backend Image Size](https://img.shields.io/docker/image-size/wpmzkx/docker-hoj-backend-alpine?sort=date&label=backend-alpine%20size)
+![docker-hoj-backend Image Version](https://img.shields.io/docker/v/wpmzkx/docker-hoj-backend-alpine?sort=date&label=docker-hoj-backend-alpine)
 
-![judge Pulls](https://img.shields.io/docker/pulls/petermatthew/hydro-docker-judge?label=judge%20pulls)
-![judge Image Size](https://img.shields.io/docker/image-size/petermatthew/hydro-docker-judge?sort=date&label=judge%20size)
-![hydro-docker-judge Image Version](https://img.shields.io/docker/v/petermatthew/hydro-docker-judge?sort=date&label=hydro-docker-judge)
+![judge Pulls](https://img.shields.io/docker/pulls/wpmzkx/docker-oj-judge-alpine-alpine?label=judge-alpine%20pulls)
+![judge Image Size](https://img.shields.io/docker/image-size/wpmzkx/docker-oj-judge-alpine?sort=date&label=judge-alpine%20size)
+![docker-oj-judge Image Version](https://img.shields.io/docker/v/wpmzkx/docker-oj-judge-alpine?sort=date&label=docker-oj-judge-alpine)
+
+使用经过开昕验证过的手动构建的版本，请将dockerhub的命名空间从wpmzkx改为petermatthew
+
+![Conf. backend Pulls](https://img.shields.io/docker/pulls/petermatthew/docker-hoj-backend?label=Conf.%20backend%20pulls)
+![Conf. backend Image Size](https://img.shields.io/docker/image-size/petermatthew/docker-hoj-backend?sort=date&label=Conf.%20backend%20size)
+![Conf. docker-hoj-backend Image Version](https://img.shields.io/docker/v/petermatthew/docker-hoj-backend?sort=date&label=Conf.%20docker-hoj-backend)
+
+![Conf. judge Pulls](https://img.shields.io/docker/pulls/petermatthew/docker-oj-judge?label=Conf.%20judge%20pulls)
+![Conf. judge Image Size](https://img.shields.io/docker/image-size/petermatthew/docker-oj-judge?sort=date&label=Conf.%20judge%20size)
+![Conf. docker-oj-judge Image Version](https://img.shields.io/docker/v/petermatthew/docker-oj-judge?sort=date&label=Conf.%20docker-oj-judge)
 
 ## Alpine镜像版本为测试版本，和官方最开始使用的基础镜像存在差异，请谨慎使用
 
