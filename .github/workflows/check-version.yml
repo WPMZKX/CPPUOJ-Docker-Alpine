@@ -94,7 +94,7 @@ jobs:
             image_name: docker-hoj-backend-alpine
           - registry: ghcr
             component: judge
-            image_name:docker-oj-judge-alpine
+            image_name: docker-oj-judge-alpine
           - registry: dockerhub
             component: backend
             image_name: docker-hoj-backend-alpine
@@ -125,3 +125,4 @@ jobs:
           tags: |
             ${{ matrix.registry == 'ghcr' && format('ghcr.io/{0}/{1}:{2}', needs.check-release.outputs.lower_owner, matrix.image_name, needs.check-release.outputs.version) || format('{0}/{1}:{2}', secrets.DOCKER_USERNAME, matrix.image_name, needs.check-release.outputs.version) }}
             ${{ matrix.registry == 'ghcr' && format('ghcr.io/{0}/{1}:latest', needs.check-release.outputs.lower_owner, matrix.image_name) || format('{0}/{1}:latest', secrets.DOCKER_USERNAME, matrix.image_name) }}
+
